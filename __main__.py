@@ -25,7 +25,7 @@ def test_post():
     #default value 'Quappi'
     lastName = request.form.get('lastName',"Quappi")
     print(lastName)
-    toReturn = {"success": True, "Hi": lastName}
+    toReturn = {"success": True, "lastName": lastName , "name": name}
     return jsonify(toReturn);
 
 @app.route('/test/delete', methods=['DELETE'])
